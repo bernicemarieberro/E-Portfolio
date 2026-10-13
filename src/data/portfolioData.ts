@@ -25,7 +25,7 @@ export const personalInfo = {
   institution: 'Mapúa University',
   degree: 'Bachelor of Science in Accounting Information Systems (BS AIS)',
   yearLevel: 'Fourth Year Undergraduate',
-  avatarUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80',
+  avatarUrl: 'assets/Berro_2×2.jpg',
   profileAltUrl: 'https://images.unsplash.com/photo-1580894732444-8ecded7900cd?auto=format&fit=crop&w=800&q=80',
   bio: `I am a fourth-year Bachelor of Science in Accounting Information Systems student at Mapúa University, recognized as Dean's Lister and President's Lister. Skilled in analyzing, transforming, and interpreting complex financial datasets through modern analytics architectures including Microsoft Excel, Power BI, Looker Studio, and Zoho Books.
 
