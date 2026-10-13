@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    
+    /* Precise Muted Blue Palette Tokens from user's reference palette */
+    --palette-shade-1: #95b3cd; /* Soft dusty sky blue */
+    --palette-shade-2: #c3d1de; /* Silvery mist blue */
+    --palette-shade-3: #2d466f; /* Deep classic navy slate */
+    --palette-shade-4: #adc5d9; /* Powder steel blue */
+    --palette-shade-5: #d8e2eb; /* Pale ice tint */
+
+    /* Light Theme Foundations */
+    --bg-primary: #f6f8fb;
+    --bg-surface: #ffffff;
+    --border-subtle: #d8e2eb;
+    --text-primary: #1c2b3e;
+    --text-muted: #566c84;
+    --brand-primary: #2d466f;
+    --brand-accent: #95b3cd;
+  }
+
+  .dark {
+    /* Dark Theme Foundations */
+    --bg-primary: #0c1421;
+    --bg-surface: #121c2d;
+    --border-subtle: #1e2e44;
+    --text-primary: #f1f5f9;
+    --text-muted: #95a7bc;
+    --brand-primary: #adc5d9;
+    --brand-accent: #95b3cd;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+  }
+}
+
+/* Custom subtle scrollbar styled with the palette */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(149, 179, 205, 0.45);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(45, 70, 111, 0.7);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(173, 197, 217, 0.3);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(173, 197, 217, 0.6);
+}
+
+/* Smooth transition utility */
+* {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 220ms;
+}
+
+canvas, [data-no-transition] {
+  transition: none !important;
+}
